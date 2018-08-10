@@ -1,0 +1,13 @@
+syntax="proto3";
+
+service Search {
+    rpc SearchFromRedis(UseridRequest) returns (FriendListReply){};
+};
+
+message UseridRequest{
+    repeated string UserIdList =1;
+}
+
+message FriendListReply{
+    string FriendsList =1;
+}
